@@ -1,0 +1,34 @@
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import "./theme/variables.css";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(140, 255, 219, 0.18), transparent 38%),
+    linear-gradient(180deg, #06111f 0%, #081525 55%, #050b13 100%);
+}
+
+body {
+  color: #e5eef8;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+ion-app,
+ion-router-outlet,
+ion-page {
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}

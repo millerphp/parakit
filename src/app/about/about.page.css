@@ -1,0 +1,137 @@
+.about {
+  --padding-top: max(12px, env(safe-area-inset-top));
+  --padding-bottom: calc(max(12px, env(safe-area-inset-bottom)) + 32px);
+  --padding-start: max(12px, env(safe-area-inset-left));
+  --padding-end: max(12px, env(safe-area-inset-right));
+}
+
+.frame {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(124, 247, 199, 0.16), transparent 30%),
+    linear-gradient(180deg, #051019 0%, #071523 45%, #04090f 100%);
+  color: #e5eef8;
+}
+
+.page-header {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.back-button {
+  appearance: none;
+  border: 1px solid rgba(124, 247, 199, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: rgba(229, 238, 248, 0.68);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.section {
+  border: 1px solid rgba(124, 247, 199, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(229, 238, 248, 0.7);
+}
+
+.kv {
+  display: grid;
+  gap: 8px;
+}
+
+.kv__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.kv__key {
+  color: rgba(229, 238, 248, 0.65);
+}
+
+.kv__value {
+  font-weight: 600;
+  text-align: right;
+}
+
+.kv__value a {
+  color: rgba(124, 247, 199, 0.95);
+  text-decoration: none;
+}
+
+.action-row {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.action-row + .action-row {
+  margin-top: 4px;
+}
+
+.action-row--first {
+  margin-top: 14px;
+}
+
+.warning--spaced {
+  margin-top: 14px;
+}
+
+.action-desc {
+  font-size: 0.85rem;
+  color: rgba(229, 238, 248, 0.72);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.warning {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 217, 102, 0.32);
+  background: rgba(255, 217, 102, 0.08);
+  color: rgba(229, 238, 248, 0.92);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.credit {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(229, 238, 248, 0.85);
+}

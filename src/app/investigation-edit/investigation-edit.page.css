@@ -1,0 +1,90 @@
+.edit {
+  --padding-top: max(12px, env(safe-area-inset-top));
+  --padding-bottom: calc(max(12px, env(safe-area-inset-bottom)) + 32px);
+  --padding-start: max(12px, env(safe-area-inset-left));
+  --padding-end: max(12px, env(safe-area-inset-right));
+}
+
+.frame {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(124, 247, 199, 0.16), transparent 30%),
+    linear-gradient(180deg, #051019 0%, #071523 45%, #04090f 100%);
+  color: #e5eef8;
+}
+
+.page-header {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.back-button {
+  appearance: none;
+  border: 1px solid rgba(124, 247, 199, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: rgba(229, 238, 248, 0.68);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.section {
+  border: 1px solid rgba(124, 247, 199, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+ion-input,
+ion-textarea {
+  --background: rgba(6, 17, 31, 0.34);
+  --color: #e5eef8;
+  --placeholder-color: rgba(229, 238, 248, 0.5);
+  --border-radius: 18px;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  border: 1px solid rgba(124, 247, 199, 0.18);
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 14px;
+}
+
+.notice {
+  margin: 0;
+  color: rgba(229, 238, 248, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

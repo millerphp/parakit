@@ -1,0 +1,212 @@
+.home {
+  /* Extra top padding leaves clearance for the absolute-positioned settings
+     gear in the top-right corner (40px button + 12px gap below). */
+  --padding-top: calc(max(12px, env(safe-area-inset-top)) + 52px);
+  --padding-bottom: calc(max(12px, env(safe-area-inset-bottom)) + 32px);
+  --padding-start: max(12px, env(safe-area-inset-left));
+  --padding-end: max(12px, env(safe-area-inset-right));
+}
+
+.settings-btn {
+  appearance: none;
+  position: absolute;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 247, 199, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(229, 238, 248, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.settings-btn ion-icon {
+  font-size: 1.3rem;
+}
+
+.settings-btn:active {
+  transform: scale(0.95);
+}
+
+.active-banner {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(124, 247, 199, 0.32);
+  background:
+    linear-gradient(90deg, rgba(124, 247, 199, 0.18), rgba(124, 247, 199, 0.06));
+  color: rgba(229, 238, 248, 0.95);
+  text-align: left;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 140ms ease;
+}
+
+.active-banner:active {
+  transform: scale(0.99);
+}
+
+.active-banner__pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(124, 247, 199, 0.95);
+  box-shadow: 0 0 0 0 rgba(124, 247, 199, 0.6);
+  flex-shrink: 0;
+  animation: active-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes active-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 247, 199, 0.6); }
+  50%      { box-shadow: 0 0 0 10px rgba(124, 247, 199, 0); }
+}
+
+.active-banner__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.active-banner__title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active-banner__meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(229, 238, 248, 0.7);
+}
+
+.active-banner ion-icon {
+  font-size: 1.4rem;
+  color: rgba(124, 247, 199, 0.9);
+  flex-shrink: 0;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tile {
+  appearance: none;
+  border: 1px solid rgba(124, 247, 199, 0.18);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top, rgba(124, 247, 199, 0.16), transparent 55%),
+    rgba(255, 255, 255, 0.05);
+  min-height: 132px;
+  padding: 16px;
+  text-align: center;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.tile:active {
+  transform: scale(0.98);
+}
+
+.tile--coming-soon {
+  background:
+    radial-gradient(circle at top, rgba(142, 184, 255, 0.13), transparent 55%),
+    rgba(255, 255, 255, 0.035);
+}
+
+.tile--locked {
+  border-color: rgba(229, 238, 248, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: none;
+  color: rgba(229, 238, 248, 0.45);
+  cursor: not-allowed;
+}
+
+.tile--locked:active {
+  transform: none;
+}
+
+.tile--locked .tile__icon {
+  background: rgba(6, 17, 31, 0.3);
+  border-color: rgba(229, 238, 248, 0.08);
+  color: rgba(229, 238, 248, 0.45);
+}
+
+.tile--locked .tile__title {
+  color: rgba(229, 238, 248, 0.55);
+}
+
+.tile__icon {
+  display: inline-flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(6, 17, 31, 0.45);
+  border: 1px solid rgba(124, 247, 199, 0.16);
+  color: var(--ion-color-primary);
+}
+
+.tile--coming-soon .tile__icon {
+  color: rgba(229, 238, 248, 0.65);
+}
+
+.tile__icon ion-icon {
+  font-size: 1.85rem;
+}
+
+.tile__title {
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tile-grid {
+    gap: 16px;
+  }
+
+  .tile {
+    min-height: 152px;
+    padding: 18px;
+  }
+
+  .tile__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .tile__icon ion-icon {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ParaKit: Investigation Toolkit</string>
+    <string name="title_activity_main">ParaKit: Investigation Toolkit</string>
+    <string name="package_name">tech.christophermiller.parakit</string>
+    <string name="custom_url_scheme">tech.christophermiller.parakit</string>
+</resources>

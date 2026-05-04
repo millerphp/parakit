@@ -1,0 +1,207 @@
+.photograph {
+  --padding-top: max(12px, env(safe-area-inset-top));
+  --padding-bottom: calc(max(12px, env(safe-area-inset-bottom)) + 32px);
+  --padding-start: max(12px, env(safe-area-inset-left));
+  --padding-end: max(12px, env(safe-area-inset-right));
+}
+
+.frame {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top, rgba(124, 247, 199, 0.16), transparent 30%),
+    linear-gradient(180deg, #051019 0%, #071523 45%, #04090f 100%);
+  color: #e5eef8;
+}
+
+.page-header {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.back-button {
+  appearance: none;
+  border: 1px solid rgba(124, 247, 199, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: rgba(229, 238, 248, 0.68);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.section {
+  border: 1px solid rgba(124, 247, 199, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: rgba(229, 238, 248, 0.7);
+  margin-bottom: 12px;
+}
+
+.section__label ion-icon {
+  color: var(--ion-color-primary);
+}
+
+.capture {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.capture-btn {
+  appearance: none;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 247, 199, 0.4);
+  background:
+    radial-gradient(circle at center, rgba(124, 247, 199, 0.18), rgba(255, 255, 255, 0.03) 70%);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 0 30px rgba(124, 247, 199, 0.18);
+  transition: transform 160ms ease;
+}
+
+.capture-btn:active {
+  transform: scale(0.97);
+}
+
+.capture-btn ion-icon {
+  font-size: 3rem;
+  color: rgba(124, 247, 199, 0.9);
+}
+
+.preview {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(229, 238, 248, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 140ms ease;
+}
+
+.preview:active {
+  transform: scale(0.99);
+}
+
+.preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.gallery__item {
+  appearance: none;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 247, 199, 0.16);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.gallery__item:active {
+  transform: scale(0.98);
+  border-color: rgba(124, 247, 199, 0.32);
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.gallery__caption {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(229, 238, 248, 0.65);
+  padding: 8px 10px;
+}
+
+.empty {
+  margin: 0;
+  color: rgba(229, 238, 248, 0.55);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.notice {
+  margin: 0;
+  color: rgba(229, 238, 248, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.notice--warn {
+  color: rgba(255, 196, 196, 0.92);
+}
+
+.toast {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(124, 247, 199, 0.12);
+  border: 1px solid rgba(124, 247, 199, 0.3);
+  color: rgba(229, 238, 248, 0.92);
+  font-size: 0.9rem;
+}

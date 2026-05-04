@@ -1,0 +1,23 @@
+.floating-toast {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(max(20px, env(safe-area-inset-bottom)) + 12px);
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 35, 56, 0.95);
+  border: 1px solid rgba(124, 247, 199, 0.32);
+  color: rgba(229, 238, 248, 0.96);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  word-break: break-word;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(12px);
+  z-index: 1500;
+  animation: toast-fade-in 160ms ease-out;
+}
+
+@keyframes toast-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
