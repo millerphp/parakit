@@ -27,3 +27,7 @@ android/capacitor-cordova-android-plugins/build/
 # Local environment files
 .env
 .env.*
+
+# Repo-specific local docs / secrets
+CLAUDE.md
+android/key.properties
