@@ -115,8 +115,8 @@ export interface InvestigationDraft {
   observedAt: string;
 }
 
-const ACTIVE_KEY = 'paranormal.activeInvestigation';
-const HISTORY_KEY = 'paranormal.investigationHistory';
+const ACTIVE_KEY = 'parakit.activeInvestigation';
+const HISTORY_KEY = 'parakit.investigationHistory';
 
 @Injectable({
   providedIn: 'root'

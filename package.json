@@ -1,5 +1,5 @@
 {
-  "name": "ParanormalApp",
+  "name": "parakit",
   "version": "1.0.0",
   "author": "Christopher Miller",
   "scripts": {
@@ -9,10 +9,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "build:android": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration development --output-path dist/ParanormalApp --verbose && npx cap sync android'",
-    "install:android": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration development --output-path dist/ParanormalApp --verbose && npx cap sync android && cd android && ./gradlew installDebug'",
+    "build:android": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration development --output-path dist/ParaKit --verbose && npx cap sync android'",
+    "install:android": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration development --output-path dist/ParaKit --verbose && npx cap sync android && cd android && ./gradlew installDebug'",
     "launch:android": "/bin/sh scripts/launch-android.sh",
-    "build:android-release": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration production --output-path dist/ParanormalApp && npx cap sync android && cd android && ./gradlew bundleRelease'",
+    "build:android-release": "/bin/zsh -lc 'source ~/.nvm/nvm.sh && nvm exec 22.22.2 ng build --configuration production --output-path dist/ParaKit && npx cap sync android && cd android && ./gradlew bundleRelease'",
     "generate-icon": "node scripts/generate-icon.mjs && npx capacitor-assets generate --android"
   },
   "private": true,

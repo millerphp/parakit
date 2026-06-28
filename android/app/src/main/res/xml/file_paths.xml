@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <files-path name="paranormal_photos" path="photos/" />
-    <files-path name="paranormal_videos" path="videos/" />
-    <files-path name="paranormal_evp" path="evp/" />
+    <files-path name="parakit_photos" path="photos/" />
+    <files-path name="parakit_videos" path="videos/" />
+    <files-path name="parakit_evp" path="evp/" />
 </paths>

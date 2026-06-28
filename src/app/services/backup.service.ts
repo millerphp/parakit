@@ -84,7 +84,7 @@ export class BackupService {
     }
 
     const stamp = new Date().toISOString().slice(0, 10);
-    const fileName = `paranormal-backup-${stamp}.zip`;
+    const fileName = `parakit-backup-${stamp}.zip`;
     const result = await Downloads.saveZipWithPicker({ fileName, entries });
     if (result.cancelled || !result.uri) {
       return { exported: false };
